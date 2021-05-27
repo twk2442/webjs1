@@ -7,8 +7,33 @@
         <script>
             // 객체 : 정리정돈을  깔금하게 도와준다  ,
             // document 도 객체이다 
-            //객체안에 함수 만들수있다 
+            //객체안에 함수 담을 수 있다 
             //객체안에 만든 함수는 메소드라고 부른다.
+            // 배열 정보를 순서대로 담는 그릇 
+            // 객체 정보를 순서없이 담는 그릇
+            // ex: 
+            var workers={
+                "pro":"egoing", // key:value
+                "des":"leez"    // pro ,des 를 프로퍼티라고 한다.
+            };
+
+            document.write(workers.pro+'<br>');
+            //추가도 가능 
+            workers.keeper="duru";
+            document.write(workers.keeper);
+
+            // 객체 와 반복문 
+            // for랑 같이 씀 ex: for(var key in 객체변수이름){~~~}
+            // 객체변수이름[key]= value값 나옴 
+            // 객체가 이미 만들어져 있다고 가정하고 객체에 함수 추가 하는방법(함수만드는방법)
+            workers.showall = function(){
+                for(var key in this){
+                    document.write(key+': '+this[key]+'<br>');
+                }
+            }
+            workers.showall();
+            //객체에 소속된 변수 여기서는 pro ,des 같은것들을  프로퍼티라고 한다.
+
         </script>
     </body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function setColor(color){
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while(i<alist.length){
+                    alist[i].style.color =color; 
+                    i = i+1;
+                }
+            }
+            function nightday(self){
+                if(self.value === 'night'){ 
+                    Body.setBackgroundColor('black'); 
+                    Body.setColor('white');  
+                    self.value = 'day'; 
+                    setColor('powderblue');            
+                 }
+                 else {
+                    Body.setBackgroundColor('white'); 
+                    Body.setColor('black');                      
+                    self.value = 'night';
+                    setColor('blue');                
+                }   
+            }
+
+            var Body ={  // Body  객체  
+                setColor : function(color) {   // setColor 메소드
+                    document.querySelector('body').style.color =color;
+                },
+                setBackgroundColor :function(color) { // 메소드
+                    document.querySelector('body').style.backgroundColor =color;
+                }
+            }
+                    
+        </script>
+    </head>
+    <body>
+        <h1>web</h1>
+        <h2>hello js</h2>
+        <input type="button"  value="night" onclick="nightday(this) ">   
+        <p>
+            <div><a href="https://oper6210.tistory.com/50">리펙토링</a>>a: 코드 중복을 낮추고 효율적으로 개선하는것  ->효과:코드 자체가 간결해지며 유지보수에 용이하다</div>
+            <div>중복은 최대한 제거할 수록 좋다. </div> 
+            <div><a href="https://opentutorials.org/course/743/4736">배열</a>: js에서 배열 문법 // []대괄호로 묶는다  ex: var 배열변수이름 = ["egginh", "leezche"];
+                배열은 인덱스로 값을 꺼내올 수 있다.  
+                배열에 데이터 더 추가하고 싶을때 배열변수이름.push(추가할데이터);
+                원하는 문법은 구굴링으로 찾기  javascript array 검색 ㄱ ㄱ
+                보통 반복문과 배열이 결합해서 사용 
+            </div>
+            <div>while(조건:boolean데이터타입){
+               조건 충족시 실행 내용 ;
+               !!보통 조건식 나중에 충족하도록 변화내용 포함; 
+            }
+            </div>
+            <div>콘솔창에서 shift enter :입력안되고 줄바꿈 </div>
+
+        </p>
+
+                        
+        
+        
+    </body>
+</html>
