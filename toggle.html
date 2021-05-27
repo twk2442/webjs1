@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        
     </head>
     <body>
         <h1>web</h1>
         <input type="button"  value="night" onclick="
-            if(this.value === 'night'){
+            if(this.value === 'night'){ // 여기서 this는 onclick 이벤트가 속해있는 코드 자신을 가리킴 
                 document.querySelector('body').style.backgroundColor =  
                 'black';
                 document.querySelector('body').style.color = 'white';  //화면 블랙 글씨 흰색 
@@ -19,7 +19,8 @@
                 this.value = 'night';
             } ">   
         <script>
-            
+            // 리펙토링: 코드 중복을 낮추고 효율적으로 개선하는것  ->효과:코드 자체가 간결해지며 유자보수 용이하다
+            // 중복은 최대한 제거할 수록 좋다 
         </script>
                     
         

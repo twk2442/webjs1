@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>web</h1>
+        <h2>hello js</h2>
+        <input type="button"  value="night" onclick="
+            var target = document.querySelector('body'); // 변수,함수 활용해서 코드의 중복 줄임
+            if(this.value === 'night'){ // 여기서 this는 onclick 이벤트가 속해있는 코드 자신을 가리킴 
+                target.style.backgroundColor =  
+                'black';
+                target.style.color = 'white';  //화면 블랙 글씨 흰색 
+                this.value = 'day';
+            }
+            else {
+                target.style.backgroundColor = 
+                'white';
+                target.style.color = 'black'; //화면 화이트 글씨 블랙
+                this.value = 'night';
+            } ">   
+            <p>
+             <div>리펙토링: 코드 중복을 낮추고 효율적으로 개선하는것  ->효과:코드 자체가 간결해지며 유지보수에 용이하다</div>
+             <div>중복은 최대한 제거할 수록 좋다. </div> 
+            </p>    
+                    
+        
+        
+    </body>
+</html>

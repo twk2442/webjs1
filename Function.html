@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function first(){ // 함수 first 선언,정의
+                document.write('함수 first'+'<br>');
+            } // 함수는 보통 1가지 기능만 들어간 것이 이상적이다 하지만 여기는 
+              // 계산 , 출력 ,줄바꿈 의 3가지가 들어있어 이상적인 함수의 모습이 아니다.
+
+            first();  
+            first();
+            //함수 : 코드 정리하기위한 도구 
+
+            //연속적으로 반복되지 않아서 반복문 쓰기 어려울때 사용
+            // parameter & argument:
+            // ex : function(left,right){
+            //    ~~~~~~
+            //  }
+            //sum(2,3) ;
+            //  여기서 left,right 는 매개변수 ,parameter    
+            // 2와 3은  인자 ,argument 
+
+        </script>
+        <h2>함수 ,매개변수, 리턴 </h2>
+        <script>
+            function sum(left,right){ // 매개변수: left,right
+                return left+right;    // 리턴값 :인자의 합
+            }
+            document.write(sum(2,3)+'<br>');
+            document.write('<div style="color:red">'+sum(2,3)+'</div>');
+
+
+        </script>
+
+    </body>
+</html>
